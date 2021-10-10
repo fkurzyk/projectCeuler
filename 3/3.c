@@ -44,17 +44,8 @@ struct node* getFactors(long long int x)
 {
 	struct node *head = NULL;
 	
-	//printf("\nChecking factors for x=%lld", x);
-	
 	for (long long int i=2; i<x; i++)
 	{
-		//  BBBMMMTTT000
-		if (i%1000000000 == 0)
-		{
-			printf(".");
-			fflush(stdout);
-		}
-
 		if (x%i == 0)
 		{
 			struct node *link = (struct node*) malloc(sizeof(struct node));
