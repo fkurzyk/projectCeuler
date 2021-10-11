@@ -7,6 +7,6 @@
 # Unignore all dirs
 !*/
 
-#Ignore spaw files
+#Ignore swap files
 *.swp
 
