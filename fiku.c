@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
 
 struct node_i {
 	int data;
@@ -9,6 +11,47 @@ struct node_lli {
 	long long int data;
 	struct node_lli *next;
 };
+
+void printList_i(struct node_i* head) {
+	struct node_i *ptr = head;
+	printf("[ ");
+	while(ptr != NULL) {
+		printf("(%d)",ptr->data);
+		ptr = ptr->next;
+	}
+	printf(" ]\n");
+}
+
+struct node_i* createList_i()
+{
+	struct node_i *head = NULL;
+	return head;
+}
+
+struct node_i* addToList_i(struct node_i* head, int data)
+{
+	struct node_i *link = (struct node_i*) malloc(sizeof(struct node_i));
+	link->data = data;
+	link->next = head;
+	head = link;
+	return head;
+}
+
+void addToList_ptr_i(struct node_i** head, int data)
+{
+	struct node_i *link = (struct node_i*) malloc(sizeof(struct node_i));
+	link->data = data;
+	link->next = *head;
+	*head = link;
+	return;
+}
+
+int takeFromList_ptr_i(struct node_i** head)
+{
+	int value = (*head)->data;
+	*head = (*head)->next;
+	return value;
+}
 
 struct node_i* getFactors_i(int x)
 {
@@ -26,11 +69,6 @@ struct node_i* getFactors_i(int x)
 	}
 	
 	return head;
-}
-
-struct node_i* getFactors(int x)
-{
-	return getFactors_i(x);
 }
 
 struct node_lli* getFactors_lli(long long int x)
