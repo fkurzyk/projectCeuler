@@ -20,7 +20,7 @@ int main()
 	printf("Element taken: %d\n", el);
 	printList_i(head);
 
-	/*
+	
 	printf("-=-=-= math stuff =-=-=-\n");
 	int n = 820;
 	head = getFactors_i(n);
@@ -28,6 +28,6 @@ int main()
 	n = 360;
 	head = getFactors_i(n);
 	printList_i(head);
-	*/
+	
 }
 
