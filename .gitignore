@@ -10,3 +10,5 @@
 #Ignore swap files
 *.swp
 
+#Ignore vim session files
+Session.vim
