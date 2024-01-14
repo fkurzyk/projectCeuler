@@ -28,6 +28,7 @@ int main()
 	n = 360;
 	head = getFactors_i(n);
 	printList_i(head);
-	
+	isPrime_lli(123);
+	isPrime_lli(127);
 }
 

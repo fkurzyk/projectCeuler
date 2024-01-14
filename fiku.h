@@ -18,5 +18,6 @@ struct node_lli* getFactors_lli(long long int);
 
 int reverse_i(int);
 
+bool isPrime_lli(long long int);
 
 

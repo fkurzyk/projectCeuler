@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 struct node_i {
 	int data;
@@ -112,4 +113,19 @@ int reverse_i(int x)
 		*/
 	}
 	return reversed;
+}
+
+bool isPrime_lli(long long int n)
+{
+	for (long long int i = 2; i < n; i++)
+	{
+		//printf("i: %lld\n", i);
+		if (n % i == 0)
+		{
+			//printf("%lld is not prime\n", n);
+			return false;
+		}
+	}
+	printf("%lld is prime\n", n);
+	return true;
 }

@@ -20,6 +20,7 @@ int main()
 	int latestMax = 0;
 	for (int n = 999; n >= 100; n--)
 	{
+		printf("%d ", n);
 		for (int m = 999; m >= 100; m--)
 		{
 			if (isPalindrome(n*m))
